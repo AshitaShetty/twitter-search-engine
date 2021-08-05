@@ -25,10 +25,10 @@ type TweetData struct {
 
 func GetCredentials() Credentials { // can set the variable using export, but have hardcoded it for simplicity
 	creds := Credentials{
-		ConsumerKey:       "LeAyjC9GCpuvsR0U8GNBKSLeV",
-		ConsumerSecret:    "05wCDno98o29r3jHMXVWUaPB2W12cjHLGXcLRbjRDwcZWb4Y69",
-		AccessToken:       "1407521565848211459-2ni0d4NTknj1GFb9KYTXgMfdbKAo6Q",
-		AccessTokenSecret: "SLr8b8IRnhRUo0yGCWNlTjBo2JOpPZF1Gx7YpvQGUtitf",
+		ConsumerKey:       "****************",
+		ConsumerSecret:    "*****************",
+		AccessToken:       "*******************",
+		AccessTokenSecret: "********************",
 	}
 
 	return creds
