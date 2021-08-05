@@ -1,0 +1,76 @@
+definitions:
+  search.EsTweetObj:
+    properties:
+      Tweet:
+        $ref: '#/definitions/search.TweetStruct'
+      TweetId:
+        type: string
+    type: object
+  search.SearchTweetResponse:
+    properties:
+      tweets:
+        items:
+          $ref: '#/definitions/search.EsTweetObj'
+        type: array
+    type: object
+  search.TweetStruct:
+    properties:
+      created_at:
+        type: string
+      lang:
+        type: string
+      name:
+        type: string
+      text:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /v1/tweet/search:
+    get:
+      consumes:
+      - application/json
+      description: Search tweets
+      operationId: get-tweets
+      parameters:
+      - description: search
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/search.SearchTweetResponse'
+      summary: Get raw tweet based on search
+      tags:
+      - Tweets
+  /v1/tweet/searchByLang:
+    get:
+      consumes:
+      - application/json
+      description: "Search tweets by lang, accepted language:\nName\tLanguage code\nEnglish
+        (default)\ten\nArabic\tar\nBengali\tbn\nCzech\tcs\nDanish\tda\nGerman\tde\nGreek\tel\nSpanish\tes\nPersian\tfa\nFinnish\tfi\nFilipino\tfil\nFrench\tfr\nHebrew\the\nHindi\thi\nHungarian\thu\nIndonesian\tid\nItalian\tit\nJapanese\tja\nKorean\tko\nMalay\tmsa\nDutch\tnl\nNorwegian\tno\nPolish\tpl\nPortuguese\tpt\nRomanian\tro\nRussian\tru\nSwedish\tsv\nThai\tth\nTurkish\ttr\nUkrainian\tuk\nUrdu\tur\nVietnamese\tvi\nChinese
+        (Simplified)\tzh-cn\nChinese (Traditional)\tzh-tw"
+      operationId: get-tweets-byLang
+      parameters:
+      - description: search by lang
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/search.SearchTweetResponse'
+      summary: Get raw tweet based on search
+      tags:
+      - Tweets
+swagger: "2.0"
