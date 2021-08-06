@@ -6,7 +6,7 @@ Tweets are streamed in real time into a kafka topic which is then consumed by th
 
 # Getting Started
 
-# Installing Kafka, redis and elasticSearch on Windows 
+## Installing Kafka, redis and elasticSearch on Windows 
 
 Download and extract ZooKeeper from http://zookeeper.apache.org/releases.html
 Download and extract Kafka from http://kafka.apache.org/downloads.html
