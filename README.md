@@ -6,7 +6,7 @@ Tweets are streamed in real time into a kafka topic which is then consumed by th
 
 # Getting Started
 
-## Installing Kafka, redis and elasticSearch on Windows 
+## Installation on Windows
 
 Download and extract ZooKeeper from http://zookeeper.apache.org/releases.html
 Download and extract Kafka from http://kafka.apache.org/downloads.html
@@ -14,23 +14,23 @@ Download and extract Elasticsearch from https://artifacts.elastic.co/downloads/e
 Older versions of redis are available on windows (which is enough for this project) follow the instruictions on https://github.com/microsoftarchive/redis/releases
 
 
-# Start Kafka service
+## Start Kafka service
 
 Open cmd, navigate to folder containing Zookeeper and start the zookeeper using the command
 .\bin\zkserver
 Open another cmd, navigate to folder containing Kafka and start the kafka service using the command
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-# Start ElasticSearch
+## Start ElasticSearch
 
 Open cmd, navigate to folder containing elasticsearch and use command
 .\bin\elasticsearch.bat
 
-# Start Redis
+## Start Redis
 
 Nagivate to the folder containing redis (64bit) and run redis-server.exe
 
-# Get data from twitter
+## Get data from twitter
 
 To get data from twitter, get authentication code from  https://developer.twitter.com/en/apply-for-access and update program twitter_producer.go with the credentials.
 
