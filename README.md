@@ -54,7 +54,7 @@ To run this producer, run the following command :
 ## twitter_consumer
 This folder contains all the files which are required to start the consumtion of the tweets and add them to elasticSearch.
 
-Each tweet is parsed as a json and added to the elasticsearch. An inverse index is created based on the tweet.Text by removing stop words and special characters. This inverse index is stored as a key-list pair in redis,which will later be used in the search service
+Each tweet is parsed as a json and added to the elasticsearch. An inverse index is created based on the tweet.Text by removing stop words and special characters. This inverse index is stored as a key-value pair in redis,which will later be used in the search service
 
 To run this consumer, run the following command :
 
