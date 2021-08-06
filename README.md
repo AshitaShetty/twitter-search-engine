@@ -49,7 +49,7 @@ This folder contains all the files required to start the twitter streaming servi
 
 To run this producer, run the following command :
 
-+ `$ go run main.go`
++ `$ go run .\twitter_producer\main.go`
 
 ## twitter_consumer
 This folder contains all the files which are required to start the consumtion of the tweets and add them to elasticSearch.
@@ -58,15 +58,15 @@ Each tweet is parsed as a json and added to the elasticsearch. An inverse index 
 
 To run this consumer, run the following command :
 
-+ `$ go run main.go`
++ `$ go run .\twitter_consumer\main.go`
 
-## twitter-search
+## twitter_search
 This folder contains all the files required to start the twitter Search service and host the API on Swagger.
 
 User is able to search the tweets by keyword and language
 
 To run this search engine, run the following command :
 
-+ `$ go run main.go`
++ `$ go run .\twitter_search\main.go`
 
 The API is hosted on : http://localhost:8080/swagger/index.html#/
