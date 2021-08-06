@@ -67,6 +67,6 @@ User is able to search the tweets by keyword and language
 
 To run this search engine, run the following command :
 
-go run main.go
+* go run main.go
 
 The API is hosted on : http://localhost:8080/swagger/index.html#/
